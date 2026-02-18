@@ -1,0 +1,55 @@
+{
+  "siteName": "JHAP 운동생리학 문제집",
+  "siteUrl": "https://username.github.io/health-workbook-landing",
+  "ogImage": "/images/og-image.svg",
+  "brand": {
+    "name": "JHAP",
+    "tagline": "운동생리학 전과목 합격 설계",
+    "description": "운동생리학 학습자 전체를 위한 핵심 정리와 실전 문제집을 제공합니다. 자격증 대비와 지식 이해를 동시에 완성하는 학습 브랜드입니다.",
+    "story": "JHAP은 운동생리학을 공부하며 느낀 공백에서 시작되었습니다. 방대한 범위, 단편적인 요약, 실전 적용의 어려움. 우리는 시험에 필요한 핵심을 선별하고, 개념과 문제를 연결하는 구조를 만들었습니다.\n\n자격증 합격을 목표로 하면서도, 몸을 이해하는 과학적 사고를 놓치지 않는 것이 JHAP의 방향입니다.\n\n앞으로도 출제 경향과 학습 피드백을 반영하여, 학습자에게 가장 현실적인 자료를 제공합니다.",
+    "ceo": {
+      "displayName": "JHAP 리서치팀",
+      "title": "JHAP Research Lead / 운동생리학 큐레이터",
+      "message": "안녕하세요, JHAP 리서치팀입니다.\n\n운동생리학은 시험을 넘어, 몸을 이해하는 핵심 언어입니다. 저희는 실제 시험과 학습 흐름을 분석해, 개념-문제-복습이 자연스럽게 이어지는 구조로 문제집을 설계했습니다.\n\n합격과 이해, 두 목표를 모두 달성할 수 있도록 검증된 설계로 함께하겠습니다."
+    },
+    "values": [
+      {
+        "title": "합격과 이해, 동시에 잡는다",
+        "description": "시험 대비와 실전 이해를 동시에 만족시키는 구조",
+        "badge": "합격률 검증"
+      },
+      {
+        "title": "3시간이면 전체 흐름 파악",
+        "description": "방대한 내용을 핵심 흐름으로 정리하여 빠르게 이해",
+        "badge": "3시간 압축"
+      },
+      {
+        "title": "문제 풀면서 개념이 박힌다",
+        "description": "1,000개 이상의 문제로 개념을 실제 상황에 연결",
+        "badge": "1,000+ 문제"
+      },
+      {
+        "title": "최신 기출까지 반영",
+        "description": "출제 경향을 반영하여 정기적으로 개정",
+        "badge": "2026 최신"
+      }
+    ]
+  },
+  "applicationForm": {
+    "url": "https://docs.google.com/forms/d/e/FORM_ID/viewform",
+    "buttonText": "문제집 신청하기"
+  },
+  "contact": {
+    "email": "contact@example.com",
+    "instagram": "https://instagram.com/example"
+  },
+  "sns": {
+    "instagram": "https://instagram.com/example",
+    "blog": "https://blog.naver.com/example"
+  },
+  "feedbackForm": {
+    "url": "https://docs.google.com/forms/d/e/FEEDBACK_FORM_ID/viewform",
+    "buttonText": "피드백 남기기",
+    "description": "더 나은 문제집을 만들기 위해 여러분의 의견을 듣고 싶습니다. 사용 후기, 개선 사항, 오류 신고 등 무엇이든 환영합니다."
+  }
+}

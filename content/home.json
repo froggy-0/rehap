@@ -1,0 +1,121 @@
+{
+  "fitCheck": {
+    "title": "Fit Check",
+    "recommendedTitle": "이런 분께 추천",
+    "notRecommendedTitle": "이런 분께는 비추천",
+    "recommended": [
+      "<mark>체육 지도자 자격증</mark>을 준비 중인 수험생",
+      "<mark>운동생리학</mark> 과목 시험 대비가 필요한 분",
+      "<mark>단기간 핵심 문제</mark> 풀이가 필요한 분",
+      "운동을 <mark>과학적으로</mark> 이해하고 싶은 분",
+      "<mark>헬스/트레이닝</mark> 공부를 체계화하고 싶은 분"
+    ],
+    "notRecommended": [
+      "이론 강의 중심 커리큘럼을 찾는 분",
+      "장기간 학원 수업을 원하는 분",
+      "운동생리학 기초 개념 학습이 전혀 없는 분"
+    ]
+  },
+  "studyMethod": {
+    "title": "Study Method",
+    "subtitle": "구매 후 학습 흐름을 한 눈에",
+    "steps": [
+      {
+        "title": "전체 개념 훑기",
+        "description": "<mark>목차</mark>를 기준으로 <mark>시험 범위</mark>를 빠르게 파악합니다."
+      },
+      {
+        "title": "문제 풀이 반복",
+        "description": "<mark>시간 제한</mark>을 두고 <mark>실전</mark>처럼 반복 풀이합니다."
+      },
+      {
+        "title": "오답 복습 루틴",
+        "description": "<mark>틀린 문제</mark>를 중심으로 <mark>개념</mark>을 다시 정리합니다."
+      }
+    ]
+  },
+  "trustPolicy": {
+    "title": "Trust & Policy",
+    "subtitle": "구매 전에 꼭 확인하세요",
+    "notice": [
+      {
+        "title": "24시간 내 전달",
+        "description": "영업일 기준 신청 확인 후 24시간 이내 전달"
+      },
+      {
+        "title": "재다운로드 가능",
+        "description": "구매 기록 확인 시 재전달 지원"
+      },
+      {
+        "title": "업데이트 제공",
+        "description": "최신 기출/경향 반영 시 무료 업데이트"
+      },
+      {
+        "title": "환불 기준 안내",
+        "description": "전달 전 취소 시 100% 환불"
+      }
+    ],
+    "details": [
+      {
+        "question": "전달 방식은 어떻게 되나요?",
+        "answer": "PDF 파일을 이메일 또는 카카오톡으로 전달합니다."
+      },
+      {
+        "question": "업데이트는 얼마나 자주 이루어지나요?",
+        "answer": "시험 일정 및 기출 반영 시기에 맞춰 개정됩니다."
+      },
+      {
+        "question": "재다운로드는 어떻게 요청하나요?",
+        "answer": "구매 시 사용한 연락처로 문의주시면 확인 후 재전달합니다."
+      }
+    ]
+  },
+  "urgency": {
+    "title": "2026 기준 업데이트 진행 중",
+    "tag": "시즌 업데이트",
+    "messages": [
+      "2026 시험 범위 변경 사항 선반영",
+      "자격증별 출제 경향 통합 반영",
+      "구매자 무료 업데이트 제공"
+    ],
+    "footnote": "업데이트 일정은 공지 및 메시지로 안내됩니다."
+  },
+  "preChecklist": {
+    "title": "구매 전 체크리스트",
+    "items": [
+      "모바일/태블릿 열람 가능",
+      "PDF 형식 제공",
+      "필요 시 출력 가능",
+      "재다운로드 지원"
+    ]
+  },
+  "brandMessage": {
+    "title": "JHAP의 약속",
+    "subtitle": "운동생리학은 단순 시험 과목이 아닌, 몸을 이해하는 기초 과학입니다.",
+    "bullets": [
+      "국가공인 체육 자격증 취득 지원",
+      "운동생리학 핵심 개념 구조화",
+      "실전 시험 대비 문제 풀이 체계"
+    ]
+  },
+  "visual": {
+    "title": "학습 스펙트럼",
+    "headline": "개념 → 문제 → 오답 복습의 3-STEP 설계",
+    "tag": "전과목 커버",
+    "tracks": ["기초 개념", "문제 적용", "실전 대비"],
+    "stats": [
+      {
+        "label": "학습 설계",
+        "value": "3-STEP"
+      },
+      {
+        "label": "대상 범위",
+        "value": "전과목"
+      },
+      {
+        "label": "포맷",
+        "value": "PDF"
+      }
+    ]
+  }
+}
