@@ -1,6 +1,6 @@
 {
   "siteName": "JHAP 운동생리학 문제집",
-  "siteUrl": "https://username.github.io/health-workbook-landing",
+  "siteUrl": "https://froggy-0.github.io/rehap/",
   "ogImage": "/images/og-image.svg",
   "brand": {
     "name": "JHAP",
@@ -36,20 +36,20 @@
     ]
   },
   "applicationForm": {
-    "url": "https://docs.google.com/forms/d/e/FORM_ID/viewform",
+    "url": "https://forms.gle/DHSLHfJvPHcHMuVy8",
     "buttonText": "문제집 신청하기"
   },
   "contact": {
     "email": "contact@example.com",
-    "instagram": "https://instagram.com/example"
+    "instagram": "https://instagram.com/jisuu_heo"
   },
   "sns": {
-    "instagram": "https://instagram.com/example",
-    "blog": "https://blog.naver.com/example"
+    "instagram": "https://instagram.com/jisuu_heo",
+    "blog": "https://blog.naver.com/js_rehab"
   },
   "feedbackForm": {
-    "url": "https://docs.google.com/forms/d/e/FEEDBACK_FORM_ID/viewform",
+    "url": "https://forms.gle/1MYTRwGeF7ZE9oF86",
     "buttonText": "피드백 남기기",
-    "description": "더 나은 문제집을 만들기 위해 여러분의 의견을 듣고 싶습니다. 사용 후기, 개선 사항, 오류 신고 등 무엇이든 환영합니다."
+    "description": "더 나은 문제집을 만들기 위해 여러분의 의견을 듣고 싶습니다.\n사용 후기, 개선 사항, 오류 신고 등 무엇이든 환영합니다."
   }
 }

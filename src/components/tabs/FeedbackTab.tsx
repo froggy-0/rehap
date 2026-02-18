@@ -21,7 +21,7 @@ export function FeedbackTab() {
           <h2 className="text-3xl font-bold leading-[1.3] tracking-tight">
             피드백 & 문의
           </h2>
-          <p className="mt-4 text-base text-text-secondary leading-[1.7]">
+          <p className="mt-4 text-base text-text-secondary leading-[1.7] whitespace-pre-line">
             {feedbackForm.description}
           </p>
         </div>
