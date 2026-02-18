@@ -1,7 +1,8 @@
 import { cn } from "@/lib/utils";
+import { BookOpen } from "lucide-react";
 
 interface SocialIconProps {
-  type: "instagram" | "kakao" | "email";
+  type: "instagram" | "kakao" | "email" | "blog";
   className?: string;
 }
 
@@ -33,6 +34,10 @@ export function SocialIcon({ type, className }: SocialIconProps) {
         <path d="M3 7l9 6 9-6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
       </svg>
     );
+  }
+
+  if (type === "blog") {
+    return <BookOpen className={cn("h-5 w-5", className)} />;
   }
 
   return (

@@ -25,19 +25,47 @@ export function WorkbookCard({ workbook }: WorkbookCardProps) {
         <CardContent className="p-0">
           <div className="flex flex-col sm:flex-row">
             {workbook.coverImage && (
-              <div className="flex-shrink-0 bg-surface p-4 sm:w-[140px]">
+              <div className="flex-shrink-0 bg-surface p-2 flex flex-col gap-2 items-center justify-center">
                 {imageLoading && (
-                  <Skeleton className="mx-auto h-[198px] w-[100px] sm:w-full" />
+                  <Skeleton className="h-[198px] w-[100px] sm:w-[140px]" />
                 )}
                 <Image
                   src={workbook.coverImage}
                   alt={workbook.title}
                   width={140}
                   height={198}
-                  className={`mx-auto h-auto w-[100px] rounded shadow-sm sm:w-full ${imageLoading ? 'hidden' : ''}`}
+                  className={`h-auto w-[100px] sm:w-[140px] rounded shadow-sm ${imageLoading ? 'hidden' : ''}`}
                   loading="lazy"
                   onLoad={() => setImageLoading(false)}
+                  unoptimized
                 />
+                <div className="flex w-full flex-col gap-2">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="min-h-[40px] w-full text-xs"
+                    onClick={() => setExpanded(!expanded)}
+                  >
+                    {expanded ? (
+                      <>
+                        접기 <ChevronUp className="ml-1 h-3 w-3" />
+                      </>
+                    ) : (
+                      <>
+                        상세 <ChevronDown className="ml-1 h-3 w-3" />
+                      </>
+                    )}
+                  </Button>
+                  <Button asChild size="sm" className="min-h-[40px] w-full text-xs">
+                    <a
+                      href={workbook.applicationUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      신청
+                    </a>
+                  </Button>
+                </div>
               </div>
             )}
             <div className="flex flex-1 flex-col p-5">
@@ -78,7 +106,7 @@ export function WorkbookCard({ workbook }: WorkbookCardProps) {
                 )}
               </div>
 
-              <div className="mt-4 flex items-center justify-between">
+              <div className="mt-4">
                 <div>
                   {workbook.discountPrice && (
                     <span className="mr-2 text-sm text-text-muted line-through">
@@ -88,32 +116,6 @@ export function WorkbookCard({ workbook }: WorkbookCardProps) {
                   <span className="text-xl font-bold text-primary">
                     {workbook.discountPriceDisplay || workbook.priceDisplay}
                   </span>
-                </div>
-                <div className="flex gap-2">
-                  <Button
-                    variant="outline"
-                    className="min-h-[44px]"
-                    onClick={() => setExpanded(!expanded)}
-                  >
-                    {expanded ? (
-                      <>
-                        접기 <ChevronUp className="ml-1 h-4 w-4" />
-                      </>
-                    ) : (
-                      <>
-                        상세보기 <ChevronDown className="ml-1 h-4 w-4" />
-                      </>
-                    )}
-                  </Button>
-                  <Button asChild className="min-h-[44px]">
-                    <a
-                      href={workbook.applicationUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      신청하기
-                    </a>
-                  </Button>
                 </div>
               </div>
             </div>

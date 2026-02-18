@@ -33,6 +33,17 @@ export function Footer() {
             Instagram
           </a>
         )}
+        {config.sns.blog && (
+          <a
+            href={config.sns.blog}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-background/70 underline-offset-2 transition-colors hover:text-background hover:underline"
+          >
+            <SocialIcon type="blog" />
+            Blog
+          </a>
+        )}
         {config.sns.kakao && (
           <a
             href={config.sns.kakao}

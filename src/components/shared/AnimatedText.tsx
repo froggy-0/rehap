@@ -42,7 +42,7 @@ export function AnimatedText({
       variants={container}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.5 }}
+      viewport={{ once: true, amount: 0.3 }}
     >
       {text.split("").map((character, index) => (
         <m.span key={index} variants={char} className="inline-block">

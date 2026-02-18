@@ -42,7 +42,7 @@ export function WorkbookPreviewSection({
                       const label = ["문제", "해설", "요약"][index] || "미리보기";
                       return (
                         <div
-                          key={src}
+                          key={index}
                           className="relative aspect-[3/4] overflow-hidden rounded-2xl border border-white/80 bg-white/80 shadow-sm"
                         >
                           <span className="absolute left-2 top-2 rounded-full bg-white/80 px-2 py-0.5 text-[10px] font-semibold text-text-secondary shadow-sm">

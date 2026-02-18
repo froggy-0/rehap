@@ -63,7 +63,7 @@ export function WorkbookDetailDialog({
               <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-3">
                 {workbook.previewImages.slice(0, 3).map((src, index) => (
                   <div
-                    key={src}
+                    key={index}
                     className="relative aspect-[3/4] overflow-hidden rounded-xl border border-white/80 bg-white/90 shadow-sm"
                   >
                     <Image

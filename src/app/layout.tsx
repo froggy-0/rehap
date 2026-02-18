@@ -5,6 +5,7 @@ import { ErrorBoundary } from "@/components/shared/ErrorBoundary";
 import "./globals.css";
 
 const config = getSiteConfig();
+const basePath = process.env.NEXT_PUBLIC_REPO_NAME ? `/${process.env.NEXT_PUBLIC_REPO_NAME}` : '';
 
 export const metadata: Metadata = {
   title: `${config.brand.name} - ${config.brand.tagline}`,
@@ -12,10 +13,10 @@ export const metadata: Metadata = {
   metadataBase: new URL(config.siteUrl),
   icons: {
     icon: [
-      { url: '/icon.svg', type: 'image/svg+xml' },
-      { url: '/favicon.ico', sizes: 'any' },
+      { url: `${basePath}/icon.svg`, type: 'image/svg+xml' },
+      { url: `${basePath}/favicon.ico`, sizes: 'any' },
     ],
-    apple: '/apple-icon.png',
+    apple: `${basePath}/apple-icon.png`,
   },
   openGraph: {
     title: `${config.brand.name} - ${config.brand.tagline}`,

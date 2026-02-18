@@ -41,7 +41,7 @@ export function BrandValues() {
         className="text-center text-3xl font-bold leading-[1.3] tracking-tight"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.8 }}
+        viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.5 }}
       >
         핵심 가치
@@ -51,7 +51,7 @@ export function BrandValues() {
         variants={container}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
+        viewport={{ once: true, amount: 0.3 }}
       >
         {brand.values.map((value, index) => {
           const Icon = icons[index];

@@ -8,10 +8,10 @@ export const ANIMATION = {
     SLOW: 0.7,
   },
   VIEWPORT: {
-    MOBILE: 0.2,
-    TABLET: 0.3,
-    DESKTOP: 0.5,
-    TITLE: 0.8,
+    MOBILE: 0.3,    // 모바일: 30% 보일 때 시작
+    TABLET: 0.4,    // 태블릿: 40% 보일 때 시작
+    DESKTOP: 0.5,   // 웹: 50% 보일 때 시작 (더 늦게)
+    TITLE: 0.3,     // 타이틀: 30%
   },
   STAGGER: {
     FAST: 0.1,
