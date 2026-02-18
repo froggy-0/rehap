@@ -17,12 +17,12 @@ export default function Home() {
 
   const handleTabChange = (value: string) => {
     setActiveTab(value);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: "instant" });
   };
 
   const navigateToResources = () => {
     setActiveTab("resources");
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: "instant" });
   };
 
   return (

@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ScaleContainer } from "@/components/shared/ScaleContainer";
 import { ApplicationCTA } from "@/components/shared/ApplicationCTA";
+import { getAssetPath } from "@/lib/utils";
 
 interface Workbook {
   title: string;
@@ -48,7 +49,7 @@ export function WorkbookPreviewSection({
                             {label}
                           </span>
                           <Image
-                            src={src}
+                            src={getAssetPath(src)}
                             alt={`${workbook.title} 미리보기 ${index + 1}`}
                             fill
                             sizes="(min-width: 768px) 33vw, 50vw"

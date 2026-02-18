@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import type { WorkbookItem } from "@/types/content";
 import Image from "next/image";
+import { getAssetPath } from "@/lib/utils";
 
 interface WorkbookDetailDialogProps {
   workbook: WorkbookItem | null;
@@ -66,7 +67,7 @@ export function WorkbookDetailDialog({
                     className="relative aspect-[3/4] overflow-hidden rounded-xl border border-white/80 bg-white/90 shadow-sm"
                   >
                     <Image
-                      src={src}
+                      src={getAssetPath(src)}
                       alt={`${workbook.title} 미리보기 ${index + 1}`}
                       fill
                       sizes="(min-width: 640px) 33vw, 50vw"

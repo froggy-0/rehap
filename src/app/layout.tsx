@@ -10,6 +10,13 @@ export const metadata: Metadata = {
   title: `${config.brand.name} - ${config.brand.tagline}`,
   description: config.brand.description,
   metadataBase: new URL(config.siteUrl),
+  icons: {
+    icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' },
+    ],
+    apple: '/apple-icon.png',
+  },
   openGraph: {
     title: `${config.brand.name} - ${config.brand.tagline}`,
     description: config.brand.description,

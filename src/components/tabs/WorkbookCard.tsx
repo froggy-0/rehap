@@ -8,6 +8,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Check, ChevronDown, ChevronUp, BookOpen, Target, Clock, X } from "lucide-react";
 import type { WorkbookItem } from "@/types/content";
+import { getAssetPath } from "@/lib/utils";
 
 interface WorkbookCardProps {
   workbook: WorkbookItem;
@@ -153,7 +154,7 @@ export function WorkbookCard({ workbook }: WorkbookCardProps) {
                           className="overflow-hidden rounded-lg border bg-white transition-transform hover:scale-105 cursor-pointer"
                         >
                           <Image
-                            src={img}
+                            src={getAssetPath(img)}
                             alt={`미리보기 ${idx + 1}`}
                             width={400}
                             height={560}
@@ -247,7 +248,7 @@ export function WorkbookCard({ workbook }: WorkbookCardProps) {
           </button>
           <div className="relative max-h-[90vh] max-w-4xl">
             <Image
-              src={selectedImage}
+              src={getAssetPath(selectedImage)}
               alt="미리보기 확대"
               width={800}
               height={1120}
