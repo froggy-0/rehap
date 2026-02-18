@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     siteName: config.siteName,
     images: [
       {
-        url: config.ogImage,
+        url: `${config.siteUrl}${basePath}${config.ogImage}`,
         width: 1200,
         height: 630,
         alt: config.brand.name,
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${config.brand.name} - ${config.brand.tagline}`,
     description: config.brand.description,
-    images: [config.ogImage],
+    images: [`${config.siteUrl}${basePath}${config.ogImage}`],
   },
   robots: {
     index: true,
