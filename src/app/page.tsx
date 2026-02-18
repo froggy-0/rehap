@@ -15,6 +15,11 @@ const TAB_TRIGGER_CLASS =
 export default function Home() {
   const [activeTab, setActiveTab] = useState("home");
 
+  const handleTabChange = (value: string) => {
+    setActiveTab(value);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   const navigateToResources = () => {
     setActiveTab("resources");
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -22,8 +27,8 @@ export default function Home() {
 
   return (
     <div className="flex min-h-screen flex-col">
-      <Header activeTab={activeTab} onTabChange={setActiveTab} />
-      <Tabs value={activeTab} onValueChange={setActiveTab} className="flex-1">
+      <Header activeTab={activeTab} onTabChange={handleTabChange} />
+      <Tabs value={activeTab} onValueChange={handleTabChange} className="flex-1">
         <main className="flex-1">
           <TabsContent value="home" className="mt-0">
             <HomeTab onNavigateToResources={navigateToResources} />

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { getSiteConfig } from "@/lib/content";
+import { MotionProvider } from "@/components/shared/MotionProvider";
+import { ErrorBoundary } from "@/components/shared/ErrorBoundary";
 import "./globals.css";
 
 const config = getSiteConfig();
@@ -46,7 +48,11 @@ export default function RootLayout({
       <head>
         <meta name="theme-color" content="#10b981" />
       </head>
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">
+        <ErrorBoundary>
+          <MotionProvider>{children}</MotionProvider>
+        </ErrorBoundary>
+      </body>
     </html>
   );
 }

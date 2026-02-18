@@ -32,7 +32,7 @@ export function TrustPolicySection({ trustPolicy }: TrustPolicySectionProps) {
           <h2 className="mt-4 text-3xl font-bold leading-[1.3] tracking-tight">
             {trustPolicy.subtitle}
           </h2>
-          <StaggerContainer delay={130} className="mt-6 grid gap-3">
+          <StaggerContainer delay={150} className="mt-6 grid gap-3">
             {trustPolicy.notice.map((item) => (
               <div
                 key={item.title}

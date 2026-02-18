@@ -22,7 +22,7 @@ export function StudyMethodSection({ studyMethod }: StudyMethodSectionProps) {
           title="3-STEP 학습 흐름"
           subtitle={studyMethod.subtitle}
         />
-        <StaggerContainer delay={260} className="mt-10 grid gap-4 md:grid-cols-3">
+        <StaggerContainer delay={150} className="mt-10 grid gap-4 md:grid-cols-3">
           {studyMethod.steps.map((step, index) => (
             <Card key={step.title} className="border-0 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-md">
               <CardContent className="p-6 text-left">

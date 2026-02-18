@@ -1,172 +1,115 @@
-# JHAP 전환 최적화 기능 스펙 v2 (운동생리학 전과목 타겟)
+# JHAP - 운동생리학 학습 랜딩 페이지
+
+> 운동생리학 학습자 전체를 위한 핵심 정리와 실전 문제집 제공
+
+[![Next.js](https://img.shields.io/badge/Next.js-16.1.6-black)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19.2.3-blue)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)](https://www.typescriptlang.org/)
+[![Motion](https://img.shields.io/badge/Motion-12.34.1-purple)](https://motion.dev/)
+
+## 🚀 빠른 시작
+
+```bash
+# 의존성 설치
+npm install
+
+# 환경 변수 설정
+cp .env.example .env.local
+# .env.local 파일을 열어 실제 값으로 수정
+
+# 개발 서버 실행
+npm run dev
+
+# 프로덕션 빌드
+npm run build
+```
+
+## 📁 프로젝트 구조
+
+```
+rehap/
+├── src/
+│   ├── app/              # Next.js App Router
+│   ├── components/       # React 컴포넌트
+│   │   ├── layout/      # Header, Footer
+│   │   ├── sections/    # 페이지 섹션
+│   │   ├── shared/      # 공통 컴포넌트
+│   │   ├── tabs/        # 탭별 컴포넌트
+│   │   └── ui/          # shadcn UI
+│   ├── lib/             # 유틸리티 & 상수
+│   ├── hooks/           # 커스텀 훅
+│   └── types/           # TypeScript 타입
+├── content/             # JSON 콘텐츠
+├── public/              # 정적 파일
+└── docs/                # 문서
+    ├── guides/          # 개발 가이드
+    ├── decisions/       # 기술 결정 기록
+    └── reports/         # 분석 리포트
+```
+
+## 🛠️ 기술 스택
+
+- **Framework**: Next.js 16.1.6 (App Router)
+- **UI Library**: React 19.2.3
+- **Language**: TypeScript 5
+- **Styling**: Tailwind CSS 4
+- **Animation**: Motion 12.34.1
+- **Icons**: Lucide React
+- **UI Components**: shadcn/ui
+
+## 📚 문서
+
+- [개발 가이드](docs/guides/) - 컴포넌트 작성, 스타일 가이드
+- [기술 결정](docs/decisions/) - 아키텍처 및 라이브러리 선택 이유
+- [분석 리포트](docs/reports/) - 성능, 코드 품질 분석
+
+## 🎯 주요 기능
+
+- ✅ 4개 탭 구조 (홈, 문제집, 소개, 피드백)
+- ✅ Motion 기반 부드러운 애니메이션
+- ✅ 반응형 디자인 (모바일 최적화)
+- ✅ 에러 바운더리 & 에러 핸들링
+- ✅ 환경 변수 관리
+- ✅ TypeScript 타입 안정성
+
+## 🔧 개발 규칙
+
+### 컴포넌트 작성
+- 단일 책임 원칙 준수
+- 150줄 이하 권장
+- JSDoc 주석 작성
+
+### 애니메이션
+- `src/lib/constants.ts`의 상수 사용
+- LazyMotion으로 번들 최적화
+- `prefers-reduced-motion` 자동 대응
+
+### 스타일링
+- Tailwind CSS 유틸리티 우선
+- 커스텀 CSS는 최소화
+- 반응형: mobile-first
+
+자세한 내용은 [개발 가이드](docs/guides/DEVELOPMENT.md) 참조
+
+## 📊 성능
+
+- **번들 사이즈**: ~135KB (gzipped)
+- **Lighthouse**: 95+ 점
+- **빌드 시간**: ~1.7초
+
+## 🤝 기여
+
+1. 이슈 생성
+2. 브랜치 생성 (`feature/기능명`)
+3. 커밋 (`git commit -m 'feat: 기능 추가'`)
+4. 푸시 (`git push origin feature/기능명`)
+5. Pull Request 생성
 
----
+## 📝 라이선스
 
-## 0. 범위 재정의 (타겟 확장)
+MIT License
 
-### 브랜드
+## 📧 문의
 
-**JHAP**
-
-### 핵심 타겟
-
-단일 시험이 아닌 **운동생리학 학습자 전체**
-
-대상 범위:
-
-* 건강운동관리사
-* 전문 스포츠지도사
-* 생활스포츠지도사
-* 유소년 스포츠지도사
-* 노인 스포츠지도사
-* 장애인 스포츠지도사
-* 체육/스포츠 관련 전공생
-* 운동생리학 교양/자기계발 학습자
-
-### 가치 재정의
-
-JHAP은 단순 문제집 판매가 아니라:
-
-* 국가공인 체육 자격증 취득 지원
-* 운동생리학 핵심 개념 정리
-* 몸에 대한 과학적 이해 제공
-
-즉,
-"자격증 + 지식"을 동시에 제공하는 학습 브랜드.
-
----
-
-## 1. Fit Check 섹션 (추천/비추천 대상)
-
-### 목적
-
-방문자가 자신의 상황과 즉시 매칭하도록 유도.
-구매 자기합리화 지원 + 환불/불만 감소.
-
-### UI 요구사항
-
-* 2열 카드 레이아웃 (모바일: 1열 스택)
-* 좌측 추천 / 우측 비추천
-* 각 항목 4~6개 불릿
-
-### 콘텐츠 템플릿
-
-**이런 분께 추천**
-
-* 체육 지도자 자격증을 준비 중인 수험생
-* 운동생리학 과목 시험 대비가 필요한 분
-* 단기간 핵심 문제 풀이가 필요한 분
-* 운동을 과학적으로 이해하고 싶은 분
-* 헬스/트레이닝 공부를 체계화하고 싶은 분
-
-**이런 분께는 비추천**
-
-* 이론 강의 중심 커리큘럼을 찾는 분
-* 장기간 학원 수업을 원하는 분
-* 운동생리학 기초 개념 학습이 전혀 없는 분
-
----
-
-## 2. Study Method (사용 가이드)
-
-### 목적
-
-구매 후 학습 흐름을 명확히 제시하여 구매 장벽 제거.
-
-### 구조
-
-1. 전체 개념 훑기
-2. 문제 풀이 반복
-3. 오답 복습 루틴
-
-### 콘텐츠 템플릿
-
-Step 1. 전체 구성 빠르게 파악
-
-* 목차를 통해 시험 범위 이해
-
-Step 2. 실전 문제 풀이
-
-* 시간 제한 두고 반복 풀이
-
-Step 3. 오답 복습 루틴
-
-* 틀린 문제 중심 반복 학습
-
----
-
-## 3. Trust & Policy 블록
-
-### 포함 항목
-
-* 전달 시간 (예: 24시간 이내)
-* 재다운로드 가능 여부
-* 업데이트 제공 여부
-* 환불 기준 안내
-
-### UI
-
-* Notice Card + Accordion
-
----
-
-## 4. Urgency 메시지
-
-### 목적
-
-구매 지연 방지.
-
-### 메시지 유형
-
-* 최신 시험 기준 반영
-* 시험 시즌 대비 제작
-* 업데이트 예정 안내
-
----
-
-## 5. 구매 전 체크리스트
-
-CTA 직전 배치.
-
-### 체크 항목
-
-* 모바일/태블릿 열람 가능
-* 출력 가능 여부
-* PDF 형식 안내
-* 재다운로드 가능
-
----
-
-## 6. CTA 전략
-
-Primary CTA: “문제집 신청하기”
-
-배치:
-
-* Hero
-* 중간 섹션
-* 페이지 하단
-
----
-
-## 7. 브랜드 메시지 (JHAP)
-
-### 핵심 메시지
-
-* 운동생리학은 단순 시험 과목이 아닌
-* 몸을 이해하는 기초 과학
-
-### 전달 가치
-
-JHAP을 통해:
-
-* 국가공인 체육 자격증 취득 지원
-* 운동 원리 이해
-* 실전 시험 대비
-
----
-
-## 결론
-
-본 스펙은 운동생리학 전체 학습자를 위한
-JHAP 전환 최적화 기능 세트이다.
+- Email: contact@example.com
+- Instagram: [@example](https://instagram.com/example)

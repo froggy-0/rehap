@@ -54,6 +54,13 @@ export interface WorkbookItem {
   features: string[];
   coverImage?: string;
   previewImages?: string[];
+  tableOfContents?: string[];
+  studyGuide?: Array<{
+    step: number;
+    title: string;
+    desc: string;
+  }>;
+  purchaseInfo?: string[];
   applicationUrl: string;
   category: string;
 }

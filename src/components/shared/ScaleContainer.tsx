@@ -1,7 +1,7 @@
 "use client";
 
 import { ReactNode } from "react";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { m, Variants } from "motion/react";
 
 interface ScaleContainerProps {
   children: ReactNode;
@@ -9,34 +9,53 @@ interface ScaleContainerProps {
   className?: string;
 }
 
-export function ScaleContainer({ 
-  children, 
-  delay = 100,
-  className = "" 
-}: ScaleContainerProps) {
-  const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
+const container: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.1,
+    },
+  },
+};
 
+const item: Variants = {
+  hidden: { opacity: 0, scale: 0.9 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      damping: 15,
+    },
+  },
+};
+
+export function ScaleContainer({
+  children,
+  delay = 100,
+  className = "",
+}: ScaleContainerProps) {
   return (
-    <div ref={ref} className={className}>
+    <m.div
+      className={className}
+      variants={container}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+    >
       {Array.isArray(children) ? (
         children.map((child, index) => (
-          <div
-            key={index}
-            className={`transition-all duration-700 ${
-              isVisible 
-                ? "scale-100 opacity-100" 
-                : "scale-90 opacity-0"
-            }`}
-            style={{
-              transitionDelay: isVisible ? `${index * delay}ms` : "0ms",
-            }}
-          >
+          <m.div key={index} variants={item}>
             {child}
-          </div>
+          </m.div>
         ))
       ) : (
-        children
+        <m.div variants={item}>{children}</m.div>
       )}
-    </div>
+    </m.div>
   );
 }
+

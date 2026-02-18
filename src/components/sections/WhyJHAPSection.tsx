@@ -6,6 +6,7 @@ interface WhyJHAPSectionProps {
   values: Array<{
     title: string;
     description: string;
+    badge?: string;
   }>;
 }
 

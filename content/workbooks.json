@@ -11,11 +11,30 @@
       "discountPrice": 29000,
       "discountPriceDisplay": "29,000원",
       "features": ["전과목 핵심 정리", "개념 흐름도", "출제 포인트 표시", "2026 기준 업데이트"],
-      "coverImage": "/images/workbook-cover.svg",
+      "coverImage": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&h=560&fit=crop",
       "previewImages": [
-        "/images/preview-1.jpg",
-        "/images/preview-2.jpg",
-        "/images/preview-3.jpg"
+        "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=400&h=560&fit=crop",
+        "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=400&h=560&fit=crop",
+        "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400&h=560&fit=crop"
+      ],
+      "tableOfContents": [
+        "1. 운동생리학 기초 개념",
+        "2. 에너지 대사 시스템",
+        "3. 신경근육계의 이해",
+        "4. 심폐 기능과 운동",
+        "5. 운동과 영양",
+        "6. 특수 환경과 운동"
+      ],
+      "studyGuide": [
+        { "step": 1, "title": "전체 구성 파악", "desc": "목차를 통해 시험 범위 이해" },
+        { "step": 2, "title": "개념 흐름도 학습", "desc": "핵심 개념 간 연결 구조 파악" },
+        { "step": 3, "title": "출제 포인트 집중", "desc": "표시된 빈출 영역 반복 학습" }
+      ],
+      "purchaseInfo": [
+        "결제 후 24시간 이내 이메일로 전달",
+        "PDF 파일로 제공 (모바일/태블릿 열람 가능)",
+        "재다운로드 가능 (구매 후 30일)",
+        "최신 시험 기준 반영 (2026년 개정)"
       ],
       "applicationUrl": "https://docs.google.com/forms/d/e/FORM_ID/viewform",
       "category": "코어"
@@ -30,11 +49,31 @@
       "discountPrice": 21000,
       "discountPriceDisplay": "21,000원",
       "features": ["모의고사 6회분", "상세 해설", "실전 동일 구성", "시간 배분 가이드"],
-      "coverImage": "/images/workbook-cover.svg",
+      "coverImage": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400&h=560&fit=crop",
       "previewImages": [
-        "/images/preview-1.jpg",
-        "/images/preview-2.jpg",
-        "/images/preview-3.jpg"
+        "https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?w=400&h=560&fit=crop",
+        "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=400&h=560&fit=crop",
+        "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=400&h=560&fit=crop"
+      ],
+      "tableOfContents": [
+        "1회 모의고사 (50문항)",
+        "2회 모의고사 (50문항)",
+        "3회 모의고사 (50문항)",
+        "4회 모의고사 (50문항)",
+        "5회 모의고사 (50문항)",
+        "6회 모의고사 (50문항)",
+        "정답 및 상세 해설"
+      ],
+      "studyGuide": [
+        { "step": 1, "title": "시간 제한 풀이", "desc": "실제 시험 시간에 맞춰 연습" },
+        { "step": 2, "title": "오답 분석", "desc": "틀린 문제 해설 정독 및 개념 복습" },
+        { "step": 3, "title": "반복 풀이", "desc": "2주 간격으로 동일 회차 재풀이" }
+      ],
+      "purchaseInfo": [
+        "결제 후 24시간 이내 이메일로 전달",
+        "PDF 파일로 제공 (인쇄 가능)",
+        "재다운로드 가능 (구매 후 30일)",
+        "최신 출제 경향 반영 (2026년)"
       ],
       "applicationUrl": "https://docs.google.com/forms/d/e/FORM_ID/viewform",
       "category": "실전"
@@ -47,11 +86,30 @@
       "price": 20000,
       "priceDisplay": "20,000원",
       "features": ["심화 개념 집중", "응용 문제 구성", "개념-문제 연결", "핵심 요약"],
-      "coverImage": "/images/workbook-cover.svg",
+      "coverImage": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=400&h=560&fit=crop",
       "previewImages": [
-        "/images/preview-1.jpg",
-        "/images/preview-2.jpg",
-        "/images/preview-3.jpg"
+        "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=400&h=560&fit=crop",
+        "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&h=560&fit=crop",
+        "https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=400&h=560&fit=crop"
+      ],
+      "tableOfContents": [
+        "1. 고급 에너지 대사론",
+        "2. 근섬유 타입별 특성",
+        "3. 호르몬과 운동 반응",
+        "4. 고지대 적응 메커니즘",
+        "5. 운동과 면역 시스템",
+        "6. 종합 응용 문제"
+      ],
+      "studyGuide": [
+        { "step": 1, "title": "개념 심화 학습", "desc": "기본 개념 복습 후 심화 내용 학습" },
+        { "step": 2, "title": "응용 문제 풀이", "desc": "다양한 상황 적용 문제 연습" },
+        { "step": 3, "title": "개념 연결", "desc": "문제-개념 매핑으로 이해도 강화" }
+      ],
+      "purchaseInfo": [
+        "결제 후 24시간 이내 이메일로 전달",
+        "PDF 파일로 제공 (모바일/태블릿 열람 가능)",
+        "재다운로드 가능 (구매 후 30일)",
+        "심화 개념 해설 포함"
       ],
       "applicationUrl": "https://docs.google.com/forms/d/e/FORM_ID/viewform",
       "category": "코어"
@@ -64,11 +122,30 @@
       "price": 24000,
       "priceDisplay": "24,000원",
       "features": ["자격증별 핵심 요약", "빈출 포인트 정리", "실전 적용 팁", "업데이트 제공"],
-      "coverImage": "/images/workbook-cover.svg",
+      "coverImage": "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=400&h=560&fit=crop",
       "previewImages": [
-        "/images/preview-1.jpg",
-        "/images/preview-2.jpg",
-        "/images/preview-3.jpg"
+        "https://images.unsplash.com/photo-1513258496099-48168024aec0?w=400&h=560&fit=crop",
+        "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=400&h=560&fit=crop",
+        "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=400&h=560&fit=crop"
+      ],
+      "tableOfContents": [
+        "건강운동관리사 핵심 요약",
+        "생활스포츠지도사 핵심 요약",
+        "전문스포츠지도사 핵심 요약",
+        "자격증별 출제 경향 분석",
+        "빈출 문제 유형 정리",
+        "실전 적용 전략"
+      ],
+      "studyGuide": [
+        { "step": 1, "title": "자격증 선택", "desc": "본인 목표 자격증 섹션 집중" },
+        { "step": 2, "title": "빈출 포인트 암기", "desc": "표시된 핵심 내용 우선 학습" },
+        { "step": 3, "title": "실전 적용", "desc": "제공된 팁으로 문제 풀이 연습" }
+      ],
+      "purchaseInfo": [
+        "결제 후 24시간 이내 이메일로 전달",
+        "PDF 파일로 제공 (모바일/태블릿 열람 가능)",
+        "재다운로드 가능 (구매 후 30일)",
+        "자격증별 맞춤 구성"
       ],
       "applicationUrl": "https://docs.google.com/forms/d/e/FORM_ID/viewform",
       "category": "자격증별"

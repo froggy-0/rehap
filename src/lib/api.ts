@@ -4,6 +4,17 @@ interface FetchOptions extends RequestInit {
   params?: Record<string, string>;
 }
 
+class ApiError extends Error {
+  constructor(
+    public status: number,
+    public statusText: string,
+    message?: string
+  ) {
+    super(message || `API Error: ${status} ${statusText}`);
+    this.name = 'ApiError';
+  }
+}
+
 export async function apiFetch<T>(
   endpoint: string,
   options: FetchOptions = {}
@@ -21,17 +32,27 @@ export async function apiFetch<T>(
     });
   }
 
-  const response = await fetch(url.toString(), {
-    ...fetchOptions,
-    headers: {
-      "Content-Type": "application/json",
-      ...fetchOptions.headers,
-    },
-  });
+  try {
+    const response = await fetch(url.toString(), {
+      ...fetchOptions,
+      headers: {
+        "Content-Type": "application/json",
+        ...fetchOptions.headers,
+      },
+    });
 
-  if (!response.ok) {
-    throw new Error(`API Error: ${response.status} ${response.statusText}`);
+    if (!response.ok) {
+      throw new ApiError(response.status, response.statusText);
+    }
+
+    return response.json();
+  } catch (error) {
+    if (error instanceof ApiError) {
+      throw error;
+    }
+    // 네트워크 에러 등
+    throw new Error(
+      error instanceof Error ? error.message : 'Unknown error occurred'
+    );
   }
-
-  return response.json();
 }

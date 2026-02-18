@@ -1,6 +1,6 @@
 "use client";
 
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { m, Variants } from "motion/react";
 
 interface AnimatedTextProps {
   text: string;
@@ -8,23 +8,47 @@ interface AnimatedTextProps {
   delay?: number;
 }
 
-export function AnimatedText({ text, className = "", delay = 30 }: AnimatedTextProps) {
-  const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
+export function AnimatedText({
+  text,
+  className = "",
+  delay = 30,
+}: AnimatedTextProps) {
+  const container: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: delay / 1000,
+      },
+    },
+  };
+
+  const char: Variants = {
+    hidden: { opacity: 0, y: 10 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        damping: 12,
+        stiffness: 200,
+      },
+    },
+  };
 
   return (
-    <span ref={ref} className={className}>
-      {text.split("").map((char, index) => (
-        <span
-          key={index}
-          className="inline-block animate-char-fade-in"
-          style={{
-            animationDelay: isVisible ? `${index * delay}ms` : "0ms",
-            opacity: isVisible ? undefined : 0,
-          }}
-        >
-          {char === " " ? "\u00A0" : char}
-        </span>
+    <m.span
+      className={className}
+      variants={container}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.5 }}
+    >
+      {text.split("").map((character, index) => (
+        <m.span key={index} variants={char} className="inline-block">
+          {character === " " ? "\u00A0" : character}
+        </m.span>
       ))}
-    </span>
+    </m.span>
   );
 }
